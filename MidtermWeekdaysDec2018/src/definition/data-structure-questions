@@ -1,0 +1,121 @@
+Please answer the below Data Structure Questions:
+
+
+why do we need data structure?
+Data structure is a particular way of storing and organizing information in a computer so that it can be retrieved and used most productively. Different kinds of data structures are meant for different kinds of applications, and some are highly specialized to specific tasks.
+
+What are the various operations that can be performed on different Data Structures?
+The basic operations that are performed on data structures are as follows: Insertion: Insertion means addition of a new data element in a data structure. Deletion: Deletion means removal of a data element from a data structure if it is found.
+
+
+List out the areas in which data structures are applied extensively?
+
+Compiler Design,
+Operating System,
+Database Management System,
+Statistical analysis package,
+Numerical Analysis,
+Graphics,
+Artificial Intelligence,
+Simulation
+
+what is an Array?
+An array, in the context of Java, is a dynamically-created object that serves as a container to hold constant number of values of the same type.
+
+what is the difference between the Array and ArrayList?
+An array is basic functionality provided by Java. ArrayList is part of collection framework in Java. Therefore array members are accessed using [], while ArrayList has a set of methods to access elements and modify them. Array is a fixed size data structure while ArrayList is not.
+
+
+what is LinkedList?
+A linked list is a linear data structure, in which the elements are not stored at contiguous memory locations.
+
+How is an Array different from Linked List?
+The difference between an array and a linked list is that an array is an index based data structure, every element is associated with an index whereas the linked list is a data structure that uses references, each node is referred to another node. In array size is fixed whereas in link list size is not fixed.
+
+what is queue?
+A queue is an ordered collection of items where the addition of new items happens at one end, called the “rear,” and the removal of existing items occurs at the other end, commonly called the “front.”
+
+what is stack?
+Definition - What does Stack mean?
+A stack is a conceptual structure consisting of a set of homogeneous elements and is based on the principle of last in first out (LIFO). It is a commonly used abstract data type with two major operations, namely push and pop. Push and pop are carried out on the topmost element, which is the item most recently added to the stack.
+
+
+what is FIFO and LIFO?
+The difference between FIFO and LIFO results from the order in which changing unit costs are removed from inventory and become the cost of goods sold. When the unit costs have increased, LIFO will result in a larger cost of goods sold and a smaller ending inventory compared with FIFO.
+
+what is the order of complexity?
+This means that it is a certain mathematical expression of the size of the input, and the algorithm finishes between two factors of it. Generally, the smaller the order of complexity of the program's underlying algorithm, the faster it will run and the better it will scale as the input gets larger.
+
+
+what is the best case to search an element from an array?
+The term best-case performance is used in computer science to describe an algorithm's behavior under optimal conditions. For example, the best case for a simple linear search on a list occurs when the desired element is the first element of the list.
+
+what is the worst case to search an element from an array?
+
+For an unsorted array, you have to search element by element, until the element is found or array is completely traversed.
+Element can be at 1st position, the last position or somewhere in between.
+The worst case arises when the element is at last position or not in the array, therefore we have to traverse the whole array giving n no. of repetitions over loop.
+Therefore the worst case time complexity is O(n).
+
+what is tree in data structure?
+A tree is a nonlinear data structure, compared to arrays, linked lists, stacks and queues which are linear data structures. A tree can be empty with no nodes or a tree is a structure consisting of one node called the root and zero or one or more subtrees.
+
+what is graph in data structure?
+Graph. (data structure) Definition: A set of items connected by edges. Each item is called a vertex or node. Formally, a graph is a set of vertices and a binary relation between vertices, adjacency.
+
+
+what is the difference between the HashTable and HashMap?
+There are several differences between HashMap and Hashtable in Java:
+1.Hashtable is synchronized , whereas HashMap is not. This makes HashMap better for non-threaded applications, as unsynchronized Objects typically perform better than synchronized ones.
+2.Hashtable does not allow null keys or values. HashMap allows one null key and any number of null values.
+3.One of HashMap's subclasses is LinkedHashMap, so in the event that you'd want predictable iteration order (which is insertion order by default), you could easily swap out the HashMap for a LinkedHashMap. This wouldn't be as easy if you were using Hashtable.
+
+
+
+How HashMap works in java?
+HashMap in Java works on hashing principle. ... HashMap internally stores mapping in the form of Map.Entry object which contains both key and value object. When you want to retrieve the object, you call the get() method and again pass the key object.
+
+What is ArrayIndexOutOfBoundsException in java? When it occurs?
+java.lang.ArrayIndexOutOfBoundsException. ArrayIndexOutOfBoundsException is thrown to indicate that we are trying to access array element with an illegal index. This exception is thrown when the index is either negative or greater than or equal to the size of the array.
+
+What are the different ways of copying an array into another array?
+java.lang.ArrayIndexOutOfBoundsException means you are trying to access a array index that doesn't exist. The problem is that your array is of size one.However, you are going through that loop six times. You can either make n equal to one, or increase the size of your array.
+
+What is difference between an array and a linked list?
+The difference between an array and a linked list is that an array is an index based data structure, every element is associated with an index whereas the linked list is a data structure that uses references, each node is referred to another node. In array size is fixed whereas in link list size is not fixed.
+
+What is DFS and BFS?
+The breadth first search (BFS) and the depth first search (DFS) are the two algorithms used for traversing and searching a node in a graph. They can also be used to find out whether a node is reachable from a given node or not.
+
+What is Recursion?
+Recursion is a method of solving problems that involves breaking a problem down into smaller and smaller subproblems until you get to a small enough problem that it can be solved trivially. Usually recursion involves a function calling itself.
+
+What are linear and non linear data Structures?
+Linear Data Structures: The data structure where data items are organized sequentially or linearly where data elements attached one after another is called linear data structure. Data elements in a liner data structure are traversed one after the other and only one element can be directly reached while traversing. All the data items in linear data structure can be traversed in single run.
+
+Non Linear Data Structures: The data structure where data items are not organized sequentially is called non linear data structure. In other words, A data elements of the non linear data structure could be connected to more than one elements to reflect a special relationship among them. All the data elements in non linear data structure can not be traversed in single run.
+
+What is Big-(O)-notation?
+Big O notation is used in Computer Science to describe the performance or complexity of an algorithm.
+
+Outlined different kind of sorting algorithm with time complexity?
+
+Time Complexities of all Sorting Algorithms
+Following is a quick revision sheet that you may refer at last minute
+ 
+
+Algorithm       Time Complexity
+                    Best         Average        Worst
+Selection Sort      Ω(n^2)       θ(n^2)         O(n^2)
+Bubble Sort         Ω(n)         θ(n^2)         O(n^2)
+Insertion Sort      Ω(n)         θ(n^2)         O(n^2)
+Heap Sort           Ω(n log(n))  θ(n log(n))    O(n log(n))
+Quick Sort          Ω(n log(n))  θ(n log(n))    O(n^2)
+Merge Sort          Ω(n log(n))  θ(n log(n))    O(n log(n))
+Bucket Sort         Ω(n+k)       θ(n+k)         O(n^2)
+Radix Sort          Ω(nk)        θ(nk)          O(nk)
+
+
+
+
+ 
