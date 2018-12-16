@@ -1,58 +1,55 @@
 package problems;
-
-/**
- * Created by mrahman on 04/22/17.
- */
-
-        //Write a Java Program to check if the two String are Anagram. Two String are called Anagram when there is
-        //same character but in different order.For example,"CAT" and "ACT", "ARMY" and "MARY".
-/*
- * One way to find if two Strings are anagram in Java. This method
- * assumes both arguments are not null and in lowercase.
- *
- * @return true, if both String are anagram
- */
-
-import java.util.Arrays;
+import java.util.Scanner;
 import java.util.Scanner;
 
+public class Anagram
+{
+    public static void main(String[] input)
+    {
+        String str1, str2;
+        int len, len1, len2, i, j, found=0, not_found=0;
+        Scanner scan = new Scanner(System.in);
 
-public class Anagram {
+        System.out.print("Enter First String : ");
+        str1 = scan.nextLine();
+        System.out.print("Enter Second String : ");
+        str2 = scan.nextLine();
 
-        public static void main(String args[])
+        len1 = str1.length();
+        len2 = str2.length();
+
+        if(len1 == len2)
         {
-            boolean anagramw = true;
-            Scanner scan= new Scanner(System.in);
-
-            System.out.println("First Word:");
-            String input1 =scan.nextLine();
-            System.out.println("Second Word:");
-            String input2= scan.nextLine();
-            char[] A=input1.toCharArray();
-            char[] B=input2.toCharArray();
-            for(int i=0;i<A.length;i++)
+            len = len1;
+            for(i=0; i<len; i++)
             {
-                for(int j=0;j<B.length;j++)
+                found = 0;
+                for(j=0; j<len; j++)
                 {
-                    Arrays.sort(A);
-                    Arrays.sort(B);
-                    if(A[i]==B[i])
+                    if(str1.charAt(i) == str2.charAt(j))
                     {
-
-                        anagramw = true;
-
-                            System.out.println(anagramw + " and Both words are anagram words!!");
-
-                    }
-                    else
-                    {
-                        anagramw = false;
-
-                            System.out.println(anagramw + " and They are not anagram words!!");
-
+                        found = 1;
+                        break;
                     }
                 }
+                if(found == 0)
+                {
+                    not_found = 1;
+                    break;
+                }
             }
-
+            if(not_found == 1)
+            {
+                System.out.print("Strings are not Anagram to Each Other..!!");
+            }
+            else
+            {
+                System.out.print("Strings are Anagram");
+            }
+        }
+        else
+        {
+            System.out.print("Both Strings Must have the same number of Character to be an Anagram");
         }
     }
+}

@@ -1,4 +1,4 @@
-package math;
+package math.problems;
 
 public class Fibonacci {
     public static void main(String[] args) {

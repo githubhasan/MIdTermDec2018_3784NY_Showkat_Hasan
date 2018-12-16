@@ -23,7 +23,7 @@ import java.util.Properties;
 
 public class ConnectDB {
 
-    //public static MongoDatabase mongoDatabase = null;
+//    public static MongoDatabase mongoDatabase = null;
 
     public static Connection connect = null;
     public static Statement statement = null;
@@ -196,7 +196,7 @@ public class ConnectDB {
 //        }
 //        return  "Student has been registered";
 //    }
-
+//
 //    public List<User> readUserFromMongoDB(){
 //        List<User> list = new ArrayList<User>();
 //        User user = new User();
@@ -248,8 +248,8 @@ public class ConnectDB {
         try {
             connectToMySql();
                 ps = connect.prepareStatement("INSERT INTO "+tableName+" ( " + columnName1 + "," + columnName2 + " ) VALUES(?,?)");
-                ps.setInt(2,3590);
                 ps.setString(1,"Ankita Sing");
+                ps.setInt(2,3590);
                 ps.executeUpdate();
 
 
@@ -267,7 +267,7 @@ public class ConnectDB {
         User user = null;
         try{
         Connection conn = connectToMySql();
-        String query = "SELECT * FROM profile";//students
+        String query = "SELECT * FROM profile";
         // create the java statement
         Statement st = conn.createStatement();
         // execute the query, and get a java resultset
@@ -275,9 +275,8 @@ public class ConnectDB {
         // iterate through the java resultset
         while (rs.next())
         {
-            int id = rs.getInt("id");//("stID")
-            String name = rs.getString("name");//("stName")
-
+            String name = rs.getString("name");
+            int id = rs.getInt("id");
             //System.out.format("%s, %s\n", name, id);
             user = new User(name,id);
             list.add(user);
@@ -285,23 +284,23 @@ public class ConnectDB {
         }
         st.close();
        }catch (Exception e){
-           System.out.println("Got an exception! ");
-           System.out.println(e.getMessage());
+           System.err.println("Got an exception! ");
+           System.err.println(e.getMessage());
          }
        return list;
     }
 
-    public void main(String[] args)throws IOException, SQLException, ClassNotFoundException {
+    public static void main(String[] args)throws IOException, SQLException, ClassNotFoundException {
 
 
-        insertProfileToMySql("profile","id", "name");
+        insertProfileToMySql("profile","name", "id");
         List<User> list = readFromMySql();
-        for(User user:list) {
-            System.out.println(user.getId() + " " + user.getName());
+        for(User user:list){
+            System.out.println(user.getName()+ " " + user.getId());
         }
-        /*String message = insertToMongoDB(new User("Tanima Chowdhury", 3539));
+        String message = insertToMongoDB(new User("Tanima Chowdhury", 3539));
         List<User> user = readFromMongoDB();
-        */
+
 
     }
 

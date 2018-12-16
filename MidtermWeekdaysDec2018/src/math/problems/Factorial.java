@@ -1,4 +1,4 @@
-package math;
+package math.problems;
 
 /**
  * Created by mrahman on 04/02/18.

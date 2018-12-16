@@ -1,6 +1,6 @@
-package math;
+package math.problems;
 
-import databases.ConnectDB;
+import databases.ConnectToSqlDB;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,11 +16,11 @@ public class LowestNumber {
 
 		//find lowest number from the array
 
-		ConnectDB connectDB = new ConnectDB();
+		ConnectToSqlDB connectToSqlDB = new ConnectToSqlDB();
 		List<String> lowestValue = new ArrayList<String>();
 		try {
-			connectDB.insertDataFromArrayToMySql(array, "tbl_lowestNumber", "column_lowestNumber");
-			lowestValue = connectDB.readDataBase("tbl_lowestNumber", "column_lowestNumber");
+			connectToSqlDB.insertDataFromArrayToSqlTable(array, "tbl_lowestNumber", "column_lowestNumber");
+			lowestValue = connectToSqlDB.readDataBase("tbl_lowestNumber", "column_lowestNumber");
 
 		} catch (Exception e) {
 			e.printStackTrace();
